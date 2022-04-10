@@ -75,7 +75,10 @@ print(dp[-1])
 
 # [포도주 시식](https://www.acmicpc.net/problem/2156)
 ## 포도주 시식 / 실버 1 / 8분
-
+- 현재 상황(`i`)에서의 최대 경우
+   - `i-1`번째 포도주의 경우 = `dp[i-1]`
+   - `i-2`번째의 포도주 경우와 `i`번째 포도주를 마신 경우 = `dp[i-2] + grapes[i]`
+   - `i-3`번째의 포도주 경우와 `i-1`번째, `i`번째 포도주를 마신 경우 = dp[i-3]+grapes[i-1]+grapes[i]
 ## 전체 코드
 ``` python
 import sys
